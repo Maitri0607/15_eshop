@@ -8,8 +8,8 @@ import Darkmode from './Darkmode';
 const MenuLinks = [
     {
         id: 1,
-        name: "Home",
-        link: "/#home",
+        name: "",
+        link: "/#",
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const MenuLinks = [
     },
 ]
 
-const DropdownLinks = [
+const DrodownLinks = [
     {
         id: 1,
         name: "Trending Products",
@@ -54,10 +54,11 @@ export const Navbar = () => {
                     {/* logo and links section */}
                     <div className='flex items-center gap-4'>
                         <a href="#"
-                            className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl">Eshop</a>
+                            className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl">
+                            Eshop
+                        </a>
 
-
-                        {/* menu items */}
+                        {/* Menu items */}
                         <div className='hidden lg:block'>
                             <ul className="flex justify-between items-center gap-4">
                                 {
@@ -78,14 +79,17 @@ export const Navbar = () => {
                                             <FaCaretDown className="group-hover:rotate-180 duration-300" />
                                         </span>
                                     </a>
-
                                     {/* Dropdown Links */}
-                                    <div>
-                                        <ul>
+                                    <div className="absolute">
+                                        <ul className="space-y-2 z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white">
                                             {
                                                 DrodownLinks.map((data, index) => (
                                                     <li>
-
+                                                        <a
+                                                            className="text-gray-500 dark:hover:text-white duration-200 p-2 inline-block w-full hover:bg-primary/20 rounded-md font-semibold "
+                                                            href={data.link}>
+                                                            {data.name}
+                                                        </a>
                                                     </li>
                                                 ))
                                             }
