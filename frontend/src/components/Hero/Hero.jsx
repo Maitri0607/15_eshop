@@ -46,7 +46,7 @@ const Hero = () => {
     return (
         <div className='container'>
             <div className="overflow-hidden rounded-3xl min-h-[550px] sm:h-[650px] hero-bg-color flex justify-center items-center">
-                <div className="container pb-8 sm:pb-0">
+                <div className="container pb-8 sm:pb-0 lg:text-2xl">
                     {/* Hero Section */}
                     <Slider {...settings}>
                         {
